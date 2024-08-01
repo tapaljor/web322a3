@@ -3,7 +3,7 @@ const fs = require("fs");
 const router = express.Router();
 
 router.post("/signin", (req, res) => {
-    fs.readFile('https://github.com/tapaljor/web322a3/blob/main/users.json', 'utf-8', (err, data) => {
+    fs.readFile('https://github.com/tapaljor/web322a3/tree/main/users.json', 'utf-8', (err, data) => {
         if (err) return res.status(500).send("Error reading users data.");
         let users = JSON.parse(data);
         let success = false;
