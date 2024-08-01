@@ -12,5 +12,8 @@
             "src": "/(.*)",
             "dest": "server.js"
         }
-    ]
+    ],
+    "files": [
+    "users.json"
+  ]
 }
