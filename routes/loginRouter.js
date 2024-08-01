@@ -3,7 +3,8 @@ const fs = require("fs");
 const router = express.Router();
 
 router.post("/signin", (req, res) => {
-      fs.readFile(path.join(__dirname, '..', 'users.json'), 'utf-8', (err, data) => {
+      const filePath = path.join(__dirname, 'users.json');
+      fs.readFile(filePath, 'utf-8', (err, data) => {
         if (err) return res.status(500).send("Error reading users data.");
         let users = JSON.parse(data);
         let success = false;
