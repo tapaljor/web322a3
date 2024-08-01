@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web322 Assignment Library</title>
+    <link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/script.js" defer></script>
+</head>
+<body>
+<header>
+	<h1>WebBooks Library</h1>
+	{{#if authorizedUser}}
+		<a href="/signout">Sign out</a>
+	{{/if}}
+</header>
+<main>

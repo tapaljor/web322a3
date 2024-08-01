@@ -1,0 +1,32 @@
+{{>header}}
+<article class="libraryMain">
+    <form action="/home/b" method="POST"> 
+        <section class="books">
+            <h3>Books Available</h3>
+            <ul>
+            {{#if booksAvailable}}
+            {{#each booksAvailable}}
+                <li>{{Title}}<input type="checkbox" name="booksAvailable" value="{{ID}}"/> </li>
+            {{/each}}
+            {{/if}}
+            </ul>
+            <button id="borrowButton" disabled>Borrow</button>
+        </section>
+    </form>
+    <form action="/home/r" method="POST"> 
+        <section class="books">
+            {{#if authorizedUser}}
+                <h3>{{authorizedUser}}</h3>
+            {{/if}}
+            <ul>
+            {{#if borrowedBooks}}
+            {{#each borrowedBooks}}
+                <li>{{Title}}<input type="checkbox" name="booksReturn" value="{{ID}}"/> </li>
+            {{/each}}
+            {{/if}}
+            </ul>
+            <button id="renturnButton" disabled>Return</button>
+        </section>
+    </form>
+</article>
+{{>footer}}

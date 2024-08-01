@@ -1,0 +1,17 @@
+{{>header}}
+<article id="login">
+    <form action="/signin" method="POST">
+        <h3>Sign in</h3>
+        <input type="email" name="username" placeholder="Username" value="{{ username}} " required/><br/>
+        <input type="password" name="password" placeholder="Password" vlaue="{{ password }}" required/><br/>
+        <button>Submit</button><br/>
+    </form>
+    <div class="feedback" role="alert" aria-live="assertive">
+        {{#if message}}
+            {{message}}
+        {{else}}
+            Register
+        {{/if}}
+    </div>
+</article>
+{{>footer}}
